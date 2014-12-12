@@ -31,5 +31,8 @@ angular.module('myApp.services', []).
       }
 
     return restAPI;
+  })
+  .factory('proxyservice', function($http) {
+	  
   }).
   value('version', '0.1');
