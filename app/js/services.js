@@ -10,7 +10,7 @@ angular.module('myApp.services', []).
 
     var restAPI = {};
 
-    restAPI.getDrivers = function() {
+    restAPI.getDrivers = function() {alert(123);
       return $http({
         method: 'JSONP', 
         url: 'http://ergast.com/api/f1/2013/driverStandings.json?callback=JSON_CALLBACK'

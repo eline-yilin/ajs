@@ -1,3 +1,6 @@
+<?php 
+include_once 'config/config.php';;
+?>
 <!doctype html>
 <html lang="en" ng-app="myApp">
 <head>
@@ -18,9 +21,13 @@
         <div class="my-top-nav">
         <div class='my-pills-overlay'></div>
           <ul class="nav  nav-pills my-pills">
-           
+           <?php foreach($nav_array as $key => $nav_item):
+            $text = isset( $nav_item['text']) ? $nav_item['text'] : $key;
+            $href = isset( $nav_item['href']) ? $nav_item['href'] : $key;
+            $href = '#' . $href;
+           ?>
            		<li class='nav-item' id='nav-item-<?php echo $key;?>'><a href='<?php echo $href;?>'><?php echo $text;?></a></li>
-           
+           <?php endforeach;?>
            		
           </ul>
           

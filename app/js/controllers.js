@@ -20,7 +20,7 @@ controller('driversController', function($scope, ciAPIservice) {
 	    return !$scope.nameFilter || keyword.test(driver.Driver.givenName) || keyword.test(driver.Driver.familyName);
 	};
 	
-	ciAPIservice.getDrivers().success(function (response) {
+	ciAPIservice.getDrivers().success(function (response) {alert(response);
         //Dig into the responde to get the relevant data
         //$scope.driversList = response.MRData.StandingsTable.StandingsLists[0].DriverStandings;
     });
